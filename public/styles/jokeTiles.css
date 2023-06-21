@@ -1,0 +1,33 @@
+.joke-tile{
+    display: flex;
+    position: static;
+    flex-direction: column;
+    justify-content: center;
+    width: calc(100vw - 2.5rem);
+    height: calc(100vh - 2.5rem);
+    margin: auto;
+    border: 1px solid black;
+    font-size: 3rem;
+    text-align: center;
+    z-index: 1;
+}
+
+.joke-tile.dismissed{
+    display: block;
+    position: static;
+    animation: 0.5s linear 0s drop-offscreen;
+}
+
+.joke-tile .setup{
+    margin-bottom: 1.5rem;
+}
+
+@keyframes drop-offscreen{
+    from{
+        transform: translateY(0vh);
+    }
+
+    to{
+        transform: translateY(110vh);
+    }
+}

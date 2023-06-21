@@ -1,0 +1,16 @@
+{
+  "jokes": [
+    {
+      "setup": "What lies at the bottom of the ocean and twitches?",
+      "punchline": "A nervous wreck."
+    },
+    {
+      "setup": "How many apples grow on a tree?",
+      "punchline": "All of them."
+    },
+    {
+      "setup": "Why did the scarecrow win an award?",
+      "punchline": "He was outstanding in his field."
+    }
+  ]
+}

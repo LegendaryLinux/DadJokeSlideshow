@@ -1,0 +1,10 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #f3eeee;
+}
+
+#main-content{
+    display: flex;
+    height: 100vh;
+}
