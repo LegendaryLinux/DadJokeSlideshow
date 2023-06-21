@@ -23,7 +23,6 @@ createJokeTile = () => {
   jokeTile.style.color = style.fontColor;
   jokeTile.style.textShadow = `2px 2px 4px ${style.shadowColor}`;
   jokeTile.classList.add('joke-tile');
-  jokeTile.classList.add('top');
 
   const setup = document.createElement('div');
   setup.classList.add('setup');
@@ -40,8 +39,10 @@ createJokeTile = () => {
 
 const dismissJokeTile = (evt) => {
   createJokeTile();
-  evt.target.removeEventListener('click', dismissJokeTile);
+  let target = evt.target;
+  while(!target.classList.contains('joke-tile')) { target = target.parentElement; }
+  target.removeEventListener('click', dismissJokeTile);
   const contentDiv = document.getElementById('main-content');
-  evt.target.classList.add('dismissed');
-  setTimeout(() => contentDiv.removeChild(evt.target), 1000);
+  target.classList.add('dismissed');
+  setTimeout(() => contentDiv.removeChild(target), 1000);
 };

@@ -9,6 +9,7 @@
     font-size: 3rem;
     text-align: center;
     z-index: 1;
+    cursor: pointer;
 }
 
 .joke-tile.dismissed{
