@@ -1,9 +1,15 @@
 const tileStyles = [
-  {
-    backgroundColor: '#09c509',
-    fontColor: '#ffffff',
-    shadowColor: '#868686',
-  },
+  { backgroundColor: '#09c509', fontColor: '#ffffff', shadowColor: '#868686' },
+  { backgroundColor: '#59b8c0', fontColor: '#ffffff', shadowColor: '#868686' },
+  { backgroundColor: '#d7d052', fontColor: '#ffffff', shadowColor: '#868686' },
+  { backgroundColor: '#b770be', fontColor: '#ffffff', shadowColor: '#868686' },
+  { backgroundColor: '#e08e86', fontColor: '#ffffff', shadowColor: '#868686' },
+  { backgroundColor: '#5770e0', fontColor: '#ffffff', shadowColor: '#868686' },
+  { backgroundColor: '#de5f9d', fontColor: '#ffffff', shadowColor: '#868686' },
+  { backgroundColor: '#d57620', fontColor: '#ffffff', shadowColor: '#868686' },
+  { backgroundColor: '#e7cd7e', fontColor: '#ffffff', shadowColor: '#868686' },
+  { backgroundColor: '#45b06e', fontColor: '#ffffff', shadowColor: '#868686' },
+  { backgroundColor: '#d238e1', fontColor: '#ffffff', shadowColor: '#868686' },
 ];
 
 createJokeTile = () => {
@@ -33,10 +39,9 @@ createJokeTile = () => {
 };
 
 const dismissJokeTile = (evt) => {
+  createJokeTile();
   evt.target.removeEventListener('click', dismissJokeTile);
   const contentDiv = document.getElementById('main-content');
   evt.target.classList.add('dismissed');
-  evt.target.style.zIndex = (parseInt(evt.target.style.zIndex, 10) + contentDiv.childElementCount).toString();
-  setTimeout(() => contentDiv.removeChild(evt.target), 500);
-  setTimeout(createJokeTile, 150);
+  setTimeout(() => contentDiv.removeChild(evt.target), 1000);
 };

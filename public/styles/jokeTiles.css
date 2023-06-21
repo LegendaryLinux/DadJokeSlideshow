@@ -1,6 +1,5 @@
 .joke-tile{
     display: flex;
-    position: static;
     flex-direction: column;
     justify-content: center;
     width: calc(100vw - 2.5rem);
@@ -13,21 +12,33 @@
 }
 
 .joke-tile.dismissed{
-    display: block;
-    position: static;
-    animation: 0.5s linear 0s drop-offscreen;
+    position: fixed;
+    left: calc(1.25rem - 1px);
+    top: 1.25rem;
+    z-index: 50;
+    animation: 0.2s ease-out 0s bounce-up, 1s ease-in 0.2s drop-offscreen;
 }
 
 .joke-tile .setup{
     margin-bottom: 1.5rem;
 }
 
-@keyframes drop-offscreen{
+@keyframes bounce-up{
     from{
-        transform: translateY(0vh);
+        transform: translateY(0vh) rotate(0);
     }
 
     to{
-        transform: translateY(110vh);
+        transform: translateY(-12vh) rotate(4deg);
+    }
+}
+
+@keyframes drop-offscreen{
+    from{
+        transform: translateY(-12vh) rotate(4deg);
+    }
+
+    to{
+        transform: translateY(220vh) rotate(8deg);
     }
 }
