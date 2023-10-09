@@ -171,6 +171,10 @@
     {
       "setup": "What do you do when a group of clowns attacks you?",
       "punchline": "Go for the jugular."
+    },
+    {
+      "setup": "How do you put a baby astronaut to sleep?",
+      "punchline": "You rock it."
     }
   ]
 }
