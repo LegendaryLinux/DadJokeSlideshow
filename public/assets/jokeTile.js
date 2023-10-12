@@ -1,4 +1,4 @@
-const tileStyles = [
+let tileStyles = [
   { backgroundColor: '#09c509', fontColor: '#ffffff', shadowColor: '#868686' },
   { backgroundColor: '#59b8c0', fontColor: '#ffffff', shadowColor: '#868686' },
   { backgroundColor: '#d7d052', fontColor: '#ffffff', shadowColor: '#868686' },
@@ -11,11 +11,18 @@ const tileStyles = [
   { backgroundColor: '#45b06e', fontColor: '#ffffff', shadowColor: '#868686' },
   { backgroundColor: '#d238e1', fontColor: '#ffffff', shadowColor: '#868686' },
 ];
+arrayShuffle(tileStyles);
+
+let jokeIndex = 0;
+let styleIndex = 0;
 
 createJokeTile = () => {
   const contentDiv = document.getElementById('main-content');
-  const joke = jokes[Math.floor(Math.random() * jokes.length)];
-  const style = tileStyles[Math.floor(Math.random() * tileStyles.length)];
+  const joke = jokes[jokeIndex++];
+  const style = tileStyles[styleIndex++];
+
+  if(jokeIndex === jokes.length) { jokeIndex = 0; }
+  if(styleIndex === tileStyles.length) { styleIndex = 0; }
 
   const jokeTile = document.createElement('div');
   jokeTile.addEventListener('click', dismissJokeTile);
