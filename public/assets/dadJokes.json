@@ -394,6 +394,10 @@
     {
       "setup": "My friend David has his ID stolen.",
       "punchline": "Now I just call him Dav."
+    },
+    {
+      "setup": "What time is your dentist appointment?",
+      "punchline": "Tooth hurty"
     }
   ]
 }
