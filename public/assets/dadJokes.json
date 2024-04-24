@@ -398,6 +398,10 @@
     {
       "setup": "What time is your dentist appointment?",
       "punchline": "Tooth hurty"
+    },
+    {
+      "setup": "How do you measure the humor of a dad joke?",
+      "punchline": "With a sighsmograph."
     }
   ]
 }
