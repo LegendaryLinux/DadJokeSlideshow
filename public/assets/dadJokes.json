@@ -397,11 +397,15 @@
     },
     {
       "setup": "What time is your dentist appointment?",
-      "punchline": "Tooth hurty"
+      "punchline": "Tooth hurty."
     },
     {
       "setup": "How do you measure the humor of a dad joke?",
       "punchline": "With a sighsmograph."
+    },
+    {
+      "setup": "Why was the sailor upset with his son?",
+      "punchline": "His grades were below sea level."
     }
   ]
 }
