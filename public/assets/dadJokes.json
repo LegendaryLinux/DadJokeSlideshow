@@ -454,6 +454,10 @@
     {
       "setup": "I can't tell jokes about unemployed people.",
       "punchline": "They just don't work."
+    },
+    {
+      "setup": "Why does it suck to work at the calendar factory?",
+      "punchline": "They never let you take a day off."
     }
   ]
 }
