@@ -3,17 +3,20 @@
     flex-direction: column;
     justify-content: center;
     width: calc(100vw - 2.5rem);
-    height: calc(100vh - 2.5rem);
+    min-height: calc(100vh - 2.5rem);
     margin: auto;
     position: relative;
     border: 1px solid #7a736a;
     border-radius: 8px;
-    font-size: 3rem;
+    font-size: clamp(1.6rem, 3.2vw, 3rem);
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Verdana", sans-serif;
     line-height: 1.25;
     text-align: center;
     z-index: 1;
     cursor: pointer;
+    padding: 2.5rem 2.5rem 3.5rem;
+    box-sizing: border-box;
+    overflow: auto;
 }
 
 .joke-tile .more-hint{
@@ -25,6 +28,13 @@
     opacity: 0.8;
 }
 
+.joke-tile .setup,
+.joke-tile .punchline{
+    max-width: 75vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .joke-tile.dismissed{
     position: fixed;
     left: calc(1.25rem - 1px);
@@ -34,7 +44,7 @@
 }
 
 .joke-tile .setup{
-    margin-bottom: 1.5rem;
+    margin-bottom: 3.5rem;
 }
 
 @keyframes bounce-up{
