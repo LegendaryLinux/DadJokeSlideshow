@@ -28,7 +28,7 @@ createJokeTile = () => {
   jokeTile.addEventListener('click', dismissJokeTile);
   jokeTile.style.backgroundColor = style.backgroundColor;
   jokeTile.style.color = style.fontColor;
-  jokeTile.style.textShadow = `3px 3px 6px ${style.shadowColor}`;
+  jokeTile.style.textShadow = `1px 1px 2px ${style.shadowColor}`;
   jokeTile.classList.add('joke-tile');
 
   const setup = document.createElement('div');
