@@ -482,6 +482,10 @@
     {
       "setup": "I adopted a dog from the local blacksmith.",
       "punchline": "As soon as we got home, he made a bolt for the door."
+    },
+    {
+      "setup": "I tried to catch some fog yesterday.",
+      "punchline": "I mist."
     }
   ]
 }
