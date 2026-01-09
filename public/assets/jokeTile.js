@@ -1,15 +1,15 @@
 let tileStyles = [
-  { backgroundColor: '#09c509', fontColor: '#ffffff', shadowColor: '#868686' },
-  { backgroundColor: '#59b8c0', fontColor: '#ffffff', shadowColor: '#868686' },
-  { backgroundColor: '#d7d052', fontColor: '#ffffff', shadowColor: '#868686' },
-  { backgroundColor: '#b770be', fontColor: '#ffffff', shadowColor: '#868686' },
-  { backgroundColor: '#e08e86', fontColor: '#ffffff', shadowColor: '#868686' },
-  { backgroundColor: '#5770e0', fontColor: '#ffffff', shadowColor: '#868686' },
-  { backgroundColor: '#de5f9d', fontColor: '#ffffff', shadowColor: '#868686' },
-  { backgroundColor: '#d57620', fontColor: '#ffffff', shadowColor: '#868686' },
-  { backgroundColor: '#e7cd7e', fontColor: '#ffffff', shadowColor: '#868686' },
-  { backgroundColor: '#45b06e', fontColor: '#ffffff', shadowColor: '#868686' },
-  { backgroundColor: '#d238e1', fontColor: '#ffffff', shadowColor: '#868686' },
+  { backgroundColor: '#6f9c7d', fontColor: '#f8f5f0', shadowColor: '#7d776f' },
+  { backgroundColor: '#6f8fa3', fontColor: '#f8f5f0', shadowColor: '#7d776f' },
+  { backgroundColor: '#b08f5f', fontColor: '#f8f5f0', shadowColor: '#7d776f' },
+  { backgroundColor: '#9a7aa8', fontColor: '#f8f5f0', shadowColor: '#7d776f' },
+  { backgroundColor: '#b07b73', fontColor: '#f8f5f0', shadowColor: '#7d776f' },
+  { backgroundColor: '#6b7aa8', fontColor: '#f8f5f0', shadowColor: '#7d776f' },
+  { backgroundColor: '#a87a8e', fontColor: '#f8f5f0', shadowColor: '#7d776f' },
+  { backgroundColor: '#a2724a', fontColor: '#f8f5f0', shadowColor: '#7d776f' },
+  { backgroundColor: '#b8a56c', fontColor: '#f8f5f0', shadowColor: '#7d776f' },
+  { backgroundColor: '#5f8f74', fontColor: '#f8f5f0', shadowColor: '#7d776f' },
+  { backgroundColor: '#8f6f9f', fontColor: '#f8f5f0', shadowColor: '#7d776f' },
 ];
 arrayShuffle(tileStyles);
 
@@ -28,7 +28,7 @@ createJokeTile = () => {
   jokeTile.addEventListener('click', dismissJokeTile);
   jokeTile.style.backgroundColor = style.backgroundColor;
   jokeTile.style.color = style.fontColor;
-  jokeTile.style.textShadow = `2px 2px 4px ${style.shadowColor}`;
+  jokeTile.style.textShadow = `3px 3px 6px ${style.shadowColor}`;
   jokeTile.classList.add('joke-tile');
 
   const setup = document.createElement('div');
@@ -39,8 +39,13 @@ createJokeTile = () => {
   punchline.classList.add('punchline');
   punchline.innerText = joke.punchline;
 
+  const moreHint = document.createElement('div');
+  moreHint.classList.add('more-hint');
+  moreHint.innerText = 'Click or tap for more.';
+
   jokeTile.appendChild(setup);
   jokeTile.appendChild(punchline);
+  jokeTile.appendChild(moreHint);
   contentDiv.appendChild(jokeTile);
 };
 
