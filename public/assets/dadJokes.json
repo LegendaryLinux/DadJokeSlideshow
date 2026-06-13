@@ -518,6 +518,10 @@
     {
       "setup": "My favorite Disney movie is Hunchback of Notre Dame.",
       "punchline": "I love a hero with a twisted backstory."
+    },
+    {
+      "setup": "I asked the librarian if she had any books on paranoia.",
+      "punchline": "She said they were right behind me."
     }
   ]
 }
